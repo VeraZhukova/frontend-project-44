@@ -4,3 +4,5 @@
 https://asciinema.org/~VeraZhu
 [brain-even](https://asciinema.org/a/RMzIUxMQqbheV0aC0yZZfmbXr)
 [brain-calc](https://asciinema.org/a/gBI0LmT0LCmBJLmSGQHqxHVRy)
+[brain-gcd] (https://asciinema.org/a/COWS8KFESWkCuqdL3NissFOO)
+
