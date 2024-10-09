@@ -6,4 +6,4 @@ https://asciinema.org/~VeraZhu
 [brain-calc](https://asciinema.org/a/gBI0LmT0LCmBJLmSGQHqxHVRy)
 [brain-gcd] (https://asciinema.org/a/COWS8KFESWkCuqdL3NissFOO)
 [brain-progession](https://asciinema.org/a/yAIjUYJhw1uP6aY5l9XRnml6F)
-
+[brain-prime] (https://asciinema.org/a/O40FbUHZs5EmL5HzFtHYy7C9x)
