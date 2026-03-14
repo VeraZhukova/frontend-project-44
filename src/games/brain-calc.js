@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import { greetUser, generateNumber, checkAnswer  } from '../src/index.js';
+import { greetUser, generateNumber, checkAnswer  } from '../index.js';
 
 const generateOperator = () => {
   const operators = ['+','-','*'];
@@ -19,7 +19,7 @@ const generateExpression = () => {
 export const main = () => {
     const name = greetUser();
     console.log ('What s the result of the expression?')
-    for (let i=0; i<3; i +=1){
+    for (let i = 0; i<3; i +=1){
         const expression = generateExpression();
         console.log (`Question: ${expression}`)
         const answer = readlineSync.question(`Your answer `)

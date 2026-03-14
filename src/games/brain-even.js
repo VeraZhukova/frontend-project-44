@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { greetUser, generateNumber, checkAnswer  } from '../src/index.js';
+import { greetUser, generateNumber, checkAnswer  } from '../index.js';
 
 const isEven  = (number) => number%2 === 0;
 

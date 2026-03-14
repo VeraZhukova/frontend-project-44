@@ -14,11 +14,11 @@ export const generateNumber = () => {
 }
 
 export const checkAnswer  = (answer, correctAnswer, userName) => {
-  if (answer == correctAnswer) {
+  if (Number(answer) === Number(correctAnswer)) {
     console.log('Correct!');
     return true;
   } else {
-    console.log(`${answer}' is wrong answer ;(. Correct answer was ${correctAnswer}. Let's try again, ${userName}`);
+    console.log(`${answer}' is wrong answer ;(. Correct answer was ${correctAnswer}. Let's try again, ${userName}!`);
     return false;
   }
 }
