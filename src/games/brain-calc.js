@@ -24,7 +24,7 @@ export const main = () => {
         console.log (`Question: ${expression}`)
         const answer = readlineSync.question(`Your answer `)
         const correctAnswer = eval(expression);
-        const result = checkAnswer(answer, correctAnswer, name);
+        const result = checkAnswer(Number(answer), Number(correctAnswer), name);
         if(result === false) {
           return
         }
