@@ -36,11 +36,10 @@ export const main = () => {
         const answer = readlineSync.question(`Your answer: `);
         const correctAnswer = progression[randomIndex];
 
-        const result = checkAnswer(answer, correctAnswer, name);
+        const result = checkAnswer(Number(answer), Number(correctAnswer), name);
         if(result === false) {
           return
         }
       }
       console.log(`Congratulations, ${name}!`);
-    
 }
