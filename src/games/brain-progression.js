@@ -1,45 +1,45 @@
-import readlineSync from 'readline-sync';
-import { greetUser, generateNumber, checkAnswer } from '../index.js';
+import readlineSync from 'readline-sync'
+import { greetUser, generateNumber, checkAnswer } from '../index.js'
 
 function getArithmeticProgression() {
-  const progression = [];
-  const num1 = generateNumber();
-  const n = 10;
-  const difference = 3;
+  const progression = []
+  const num1 = generateNumber()
+  const n = 10
+  const difference = 3
   for (let i = 0; i < n; i++) {
-    progression.push(num1 + i * difference);
+    progression.push(num1 + i * difference)
   }
-  return progression;
+  return progression
 }
 
 const maskProgressionElement = (progression, index) => {
-  const newProgression = [];
+  const newProgression = []
   for (let i = 0; i < progression.length; i++) {
     if (i === index) {
-      newProgression.push('..');
+      newProgression.push('..')
     } else {
-      newProgression.push(progression[i]);
+      newProgression.push(progression[i])
     }
   }
-  return newProgression;
-};
+  return newProgression
+}
 
 export const main = () => {
-  const name = greetUser();
-  console.log('What number is missing in the progression?');
+  const name = greetUser()
+  console.log('What number is missing in the progression?')
   for (let i = 0; i < 3; i += 1) {
-    const progression = getArithmeticProgression();
-    const randomIndex = Math.floor(Math.random() * progression.length);
-    const maskedProgression = maskProgressionElement(progression, randomIndex);
+    const progression = getArithmeticProgression()
+    const randomIndex = Math.floor(Math.random() * progression.length)
+    const maskedProgression = maskProgressionElement(progression, randomIndex)
 
-    console.log(`Question: ${maskedProgression.join(' ')}`);
-    const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = progression[randomIndex];
+    console.log(`Question: ${maskedProgression.join(' ')}`)
+    const answer = readlineSync.question('Your answer: ')
+    const correctAnswer = progression[randomIndex]
 
-    const result = checkAnswer(Number(answer), Number(correctAnswer), name);
+    const result = checkAnswer(Number(answer), Number(correctAnswer), name)
     if (result === false) {
-      return;
+      return
     }
   }
-  console.log(`Congratulations, ${name}!`);
-};
+  console.log(`Congratulations, ${name}!`)
+}
