@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-console.log('Brain Games');
+console.log('Brain Games')
