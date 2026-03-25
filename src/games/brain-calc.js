@@ -12,7 +12,7 @@ const generateExpression = () => {
     const number1 = generateNumber()
     const number2 = generateNumber()
     const operator = generateOperator()
-    const expression = `${number1}${operator}${number2}`
+    const expression = `${number1} ${operator} ${number2}`
     return expression
 }
 
