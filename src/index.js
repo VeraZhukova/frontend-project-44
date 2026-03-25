@@ -18,7 +18,7 @@ export const checkAnswer  = (answer, correctAnswer, userName) => {
     console.log('Correct!');
     return true;
   } else {
-    console.log(`${answer}' is wrong answer ;(. Correct answer was ${correctAnswer}. Let's try again, ${userName}!`);
+    console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}. Let's try again, ${userName}!`);
     return false;
   }
 }
