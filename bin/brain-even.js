@@ -2,4 +2,4 @@
 
 import { main } from '../src/games/brain-even.js';
 
-main()
+main();
