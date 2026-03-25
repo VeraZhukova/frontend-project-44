@@ -14,7 +14,7 @@ export const generateNumber = () => {
 }
 
 export const checkAnswer  = (answer, correctAnswer, userName) => {
-  if (Number(answer) === Number(correctAnswer)) {
+  if (answer === correctAnswer) {
     console.log('Correct!');
     return true;
   } else {
