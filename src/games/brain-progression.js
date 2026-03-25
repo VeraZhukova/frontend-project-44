@@ -17,7 +17,8 @@ const maskProgressionElement = (progression, index) => {
   for (let i = 0; i < progression.length; i++) {
     if (i === index) {
       newProgression.push('..')
-    } else {
+    } 
+    else {
       newProgression.push(progression[i])
     }
   }

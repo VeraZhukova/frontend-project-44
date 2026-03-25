@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync'
 import { greetUser, generateNumber, checkAnswer } from '../index.js'
 
-const isEven = (number) => number % 2 === 0
+const isEven = number => number % 2 === 0
 
 export const main = () => {
   const name = greetUser()
