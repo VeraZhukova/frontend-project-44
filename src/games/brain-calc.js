@@ -18,7 +18,7 @@ const generateExpression = () => {
 
 export const main = () => {
     const name = greetUser();
-    console.log ('What s the result of the expression?')
+    console.log ('What is the result of the expression?')
     for (let i = 0; i<3; i +=1){
         const expression = generateExpression();
         console.log (`Question: ${expression}`)
