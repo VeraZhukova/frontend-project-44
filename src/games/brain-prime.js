@@ -20,7 +20,7 @@ export const main = () => {
     console.log(`Question: ${number}`)
     const answer = readlineSync.question('Your answer: ')
     const correctAnswer = isPrime(number)
-      ? 'yes' 
+      ? 'yes'
       : 'no'
     const result = checkAnswer(answer, correctAnswer, name)
     if (result === false) {
