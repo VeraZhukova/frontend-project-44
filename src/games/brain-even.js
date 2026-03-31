@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync'
 import { generateNumber, runGame } from '../index.js'
 
-
 const isEven = number => number % 2 === 0
 
 const evenRules = () => {

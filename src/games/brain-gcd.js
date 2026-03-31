@@ -22,4 +22,3 @@ const gcdRules = () => {
 export const main = () => {
   runGame('Find the greatest common divisor of given numbers.', gcdRules)
 }
-

@@ -30,7 +30,7 @@ export const runGame = (gameIntro, executeRules) => {
     const result = checkAnswer(answer, correctAnswer, name)
     if (result === false) {
       return
-    }  
+    }
   }
 
   console.log(`Congratulations, ${name}!`)

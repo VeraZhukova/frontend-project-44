@@ -2,7 +2,6 @@ import readlineSync from 'readline-sync'
 
 import { generateNumber, runGame } from '../index.js'
 
-
 const generateOperator = () => {
   const operators = ['+', '-', '*']
   const index = Math.floor((Math.random() * operators.length))
@@ -18,8 +17,6 @@ const generateExpression = () => {
 }
 
 const calcRules = () => {
-  const number1 = generateNumber()
-  const number2 = generateNumber()
   const expression = generateExpression()
   console.log(`Question: ${expression}`)
   const answer = Number(readlineSync.question('Your answer: '))
