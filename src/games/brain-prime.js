@@ -16,7 +16,7 @@ const primeRules = () => {
   const number = generateNumber()
   console.log(`Question: ${number}`)
   const answer = readlineSync.question('Your answer: ')
-  const correctAnswer = isPrime(number)
+  const correctAnswer = isPrime(number) ? 'yes' : 'no'
   return { answer, correctAnswer }
 }
 
