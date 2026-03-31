@@ -20,3 +20,18 @@ export const checkAnswer = (answer, correctAnswer, userName) => {
   console.log(`${answer} is wrong answer (. Correct answer was ${correctAnswer}. Let's try again, ${userName}!`)
   return false
 }
+
+export const runGame = (gameIntro, executeRules) => {
+  const name = greetUser()
+
+  console.log(gameIntro)
+  for (let i = 0; i < 3; i += 1) {
+    const { answer, correctAnswer } = executeRules()
+    const result = checkAnswer(answer, correctAnswer, name)
+    if (result === false) {
+      return
+    }  
+  }
+
+  console.log(`Congratulations, ${name}!`)
+}

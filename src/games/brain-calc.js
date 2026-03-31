@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync'
 
-import { greetUser, generateNumber, checkAnswer } from '../index.js'
+import { generateNumber, runGame } from '../index.js'
+
 
 const generateOperator = () => {
   const operators = ['+', '-', '*']
@@ -16,18 +17,16 @@ const generateExpression = () => {
   return expression
 }
 
+const calcRules = () => {
+  const number1 = generateNumber()
+  const number2 = generateNumber()
+  const expression = generateExpression()
+  console.log(`Question: ${expression}`)
+  const answer = Number(readlineSync.question('Your answer: '))
+  const correctAnswer = eval(expression)
+  return { answer, correctAnswer }
+}
+
 export const main = () => {
-  const name = greetUser()
-  console.log('What is the result of the expression?')
-  for (let i = 0; i < 3; i += 1) {
-    const expression = generateExpression()
-    console.log(`Question: ${expression}`)
-    const answer = readlineSync.question('Your answer ')
-    const correctAnswer = eval(expression)
-    const result = checkAnswer(Number(answer), Number(correctAnswer), name)
-    if (result === false) {
-      return
-    }
-  }
-  console.log(`Congratulations, ${name}!`)
+  runGame('What is the result of the expression?', calcRules)
 }

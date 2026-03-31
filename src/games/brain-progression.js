@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync'
-import { greetUser, generateNumber, checkAnswer } from '../index.js'
+import { generateNumber, runGame } from '../index.js'
 
 function getArithmeticProgression() {
   const progression = []
@@ -25,22 +25,16 @@ const maskProgressionElement = (progression, index) => {
   return newProgression
 }
 
+const progressionRules = () => {
+  const progression = getArithmeticProgression()
+  const randomIndex = Math.floor(Math.random() * progression.length)
+  const maskedProgression = maskProgressionElement(progression, randomIndex)
+  console.log(`Question: ${maskedProgression.join(' ')}`)
+  const answer = Number(readlineSync.question('Your answer: '))
+  const correctAnswer = progression[randomIndex]
+  return { answer, correctAnswer }
+}
+
 export const main = () => {
-  const name = greetUser()
-  console.log('What number is missing in the progression?')
-  for (let i = 0; i < 3; i += 1) {
-    const progression = getArithmeticProgression()
-    const randomIndex = Math.floor(Math.random() * progression.length)
-    const maskedProgression = maskProgressionElement(progression, randomIndex)
-
-    console.log(`Question: ${maskedProgression.join(' ')}`)
-    const answer = readlineSync.question('Your answer: ')
-    const correctAnswer = progression[randomIndex]
-
-    const result = checkAnswer(Number(answer), Number(correctAnswer), name)
-    if (result === false) {
-      return
-    }
-  }
-  console.log(`Congratulations, ${name}!`)
+  runGame('What number is missing in the progression?', progressionRules)
 }
