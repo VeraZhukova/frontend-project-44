@@ -14,7 +14,7 @@ const gcdRules = () => {
   const number1 = generateNumber()
   const number2 = generateNumber()
   console.log(`Question: ${number1} ${number2}`)
-  const answer = readlineSync.question('Your answer: ')
+  const answer = Number(readlineSync.question('Your answer: '))
   const correctAnswer = gcd(number1, number2)
   return { answer, correctAnswer }
 }
